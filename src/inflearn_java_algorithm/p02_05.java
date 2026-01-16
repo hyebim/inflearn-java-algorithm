@@ -10,22 +10,16 @@ public class p02_05 {
 		Scanner sc = new Scanner(System.in);
 		
 		int n = sc.nextInt();
-		int cnt = 0;
 		int answer = 0;
-		
-		for(int i = 1; i <= n; i++) {
-			int j = 1;
-			while(i == j) {
-				if(i % j == 0) {
-					cnt++;
-				}
-				j++;
-			}
-			if(cnt == 1) {
+		int[] ch = new int[n+1];
+		for(int i = 2; i <= n; i++) {
+			if(ch[i] == 0) {
 				answer++;
+				for(int j = i; j <= n; j=j+i) { // i의 배수씩 증가
+					ch[j] = 1;
+				}
 			}
 		}
-		
 		System.out.print(answer);
 
 	}

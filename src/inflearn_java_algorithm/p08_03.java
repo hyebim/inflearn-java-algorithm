@@ -2,7 +2,7 @@ package inflearn_java_algorithm;
 
 import java.util.Scanner;
 
-public class p08_02 {
+public class p08_03 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -10,15 +10,14 @@ public class p08_02 {
 		Scanner sc = new Scanner(System.in);
 		
 		int n = sc.nextInt();
-		func(n);
+		System.out.print(func(n));
 
 	}
 	
-	public static void func(int n) {
-		if(n==0) return;
+	public static int func(int n) {
+		if(n==1) return 1;
 		else {
-			func(n/2);
-			System.out.print(n%2);
+			return n * func(n-1);
 		}
 	}
 

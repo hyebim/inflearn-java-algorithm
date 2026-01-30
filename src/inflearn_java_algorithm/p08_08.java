@@ -22,7 +22,7 @@ public class p08_08 {
 //				if(cur == e) return L;
 				for(int j = 0; j < 3; j++) {
 					int next_cur = cur + dis[j];
-					if(cur == e) return L + 1; // Q에 집어넣기 전에 확인하는 게 더 좋음 
+					if(next_cur == e) return L + 1; // Q에 집어넣기 전에 확인하는 게 더 좋음 
 					if(next_cur >= 1 && next_cur <= 10000 && ch[next_cur] == 0) {
 						ch[next_cur] = 1;
 						Q.offer(next_cur);

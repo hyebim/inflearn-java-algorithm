@@ -1,7 +1,5 @@
 package inflearn_java_algorithm;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
